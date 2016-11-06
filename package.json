@@ -1,0 +1,15 @@
+{
+  "name": "angular-click-and-wait",
+  "version": "1.0.0",
+  "description": "Angular directive to prevent mutiple click on a element when performing an async action",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/mattiascaricato/angular-click-and-wait",
+    "type": "git"
+  },
+  "author": "Matías Caricato",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  }
+}
