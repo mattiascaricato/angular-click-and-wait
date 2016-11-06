@@ -10,6 +10,17 @@
   "author": "Matías Caricato",
   "license": "MIT",
   "scripts": {
-    "start": "node ."
+    "start": "gulp"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-latest": "^6.16.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
   }
 }
