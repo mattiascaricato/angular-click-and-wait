@@ -6,28 +6,34 @@ import del from 'del';
 import eslint from 'gulp-eslint';
 
 const paths = {
-  allSrc: 'src/**/*.js',
+  srcDir: 'src/**/*.js',
   gulpFile: 'gulpfile.babel.js',
   distDir: 'dist',
+  testsDir: 'test/**/*.spec.js',
 };
 
 gulp.task('clean', () => del(paths.distDir));
 
 gulp.task('lint', () =>
-  gulp.src([paths.allSrc, paths.gulpFile])
+  gulp.src([paths.srcDir, paths.gulpFile])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
 );
 
 gulp.task('build', ['lint', 'clean'], () =>
-  gulp.src(paths.allSrc)
+  gulp.src(paths.srcDir)
     .pipe(babel())
     .pipe(gulp.dest(paths.distDir))
 );
 
 gulp.task('watch', () => {
-  gulp.watch(paths.allSrc, ['default']);
+  gulp.watch(paths.srcDir, ['default']);
+});
+
+gulp.task('test', ['build'], () => {
+  gulp.src(paths.testsDir)
+    .pipe(mocha())
 });
 
 gulp.task('default', ['watch', 'build']);
