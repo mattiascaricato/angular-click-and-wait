@@ -16,7 +16,7 @@ module.exports = (config) => {
     // list of files / patterns to load in the browser
     files: [
       'bower_components/angular/angular.js',
-      'test/**/*.js',
+      'bower_components/angular-mocks/angular-mocks.js',
       'src/**/*.js',
       'test/**/*.spec.js',
     ],
@@ -30,6 +30,8 @@ module.exports = (config) => {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'src/**/*.js': ['babel'],
+      'test/**/*.spec.js': ['babel'],
     },
 
 
@@ -58,7 +60,7 @@ module.exports = (config) => {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS', 'Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode

@@ -170,7 +170,7 @@ babel-code-frame@^6.16.0:
     esutils "^2.0.2"
     js-tokens "^2.0.0"
 
-babel-core@^6.0.2, babel-core@^6.18.0:
+babel-core@^6.0.0, babel-core@^6.0.2, babel-core@^6.18.0:
   version "6.18.2"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.18.2.tgz#d8bb14dd6986fa4f3566a26ceda3964fa0e04e5b"
   dependencies:
@@ -2291,6 +2291,12 @@ karma:
     source-map "^0.5.3"
     tmp "0.0.28"
     useragent "^2.1.9"
+
+karma-babel-preprocessor:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/karma-babel-preprocessor/-/karma-babel-preprocessor-6.0.1.tgz#7ae1d3e64950dbe11f421b74040ab08fb5a66c21"
+  dependencies:
+    babel-core "^6.0.0"
 
 karma-chai:
   version "0.1.0"

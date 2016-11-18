@@ -4,6 +4,7 @@ import gulp from 'gulp';
 import babel from 'gulp-babel';
 import del from 'del';
 import eslint from 'gulp-eslint';
+import { Server } from 'karma';
 
 const paths = {
   srcDir: 'src/**/*.js',
@@ -31,9 +32,11 @@ gulp.task('watch', () => {
   gulp.watch(paths.srcDir, ['default']);
 });
 
-gulp.task('test', ['build'], () => {
-  gulp.src(paths.testsDir)
-    .pipe(mocha())
-});
+gulp.task('test', done =>
+  new Server({
+    configFile: `${__dirname}/karma.conf.js`,
+    singleRun: false,
+  }, done).start()
+);
 
 gulp.task('default', ['watch', 'build']);
