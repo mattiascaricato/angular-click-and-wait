@@ -2,6 +2,8 @@
 
 import gulp from 'gulp';
 import babel from 'gulp-babel';
+import uglify from 'gulp-uglify';
+import rename from 'gulp-rename';
 import del from 'del';
 import eslint from 'gulp-eslint';
 import { Server } from 'karma';
@@ -26,6 +28,9 @@ gulp.task('lint', () =>
 gulp.task('build', ['lint', 'clean'], () =>
   gulp.src(paths.srcDir)
     .pipe(babel())
+    .pipe(gulp.dest(paths.distDir))
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.distDir))
 );
 
