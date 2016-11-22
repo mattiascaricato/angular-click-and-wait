@@ -9,6 +9,7 @@
   "keywords": [
     "angular",
     "angularjs",
+    "directive",
     "click",
     "clicking",
     "asynchronous",
@@ -21,10 +22,8 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "test",
     "README.md",
-    "bower.json",
     "gulpfile.babel.js",
     "karma.conf.js",
     "package.json",
