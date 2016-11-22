@@ -1,9 +1,9 @@
 {
   "name": "angular-click-and-wait",
   "description": "Simple angular directive to prevent user from clicking mutiple times on a element when performing an asynchronous action",
-  "main": "dist/index.js",
+  "main": "dist/click-and-wait.js",
   "authors": [
-    "Matías Caricato"
+    "Matías Caricato <mattiascaricato@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -22,13 +22,12 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test"
-  ],
-  "dependencies": {
-    "angular": "^1.5.8",
-    "jquery": "^3.1.1"
-  },
-  "devDependencies": {
-    "angular-mocks": "^1.5.8"
-  }
+    "test",
+    "README.md",
+    "bower.json",
+    "gulpfile.babel.js",
+    "karma.conf.js",
+    "package.json",
+    "yarn.lock"
+  ]
 }

@@ -33,7 +33,6 @@ The asynchronous action passed as argument should be a `Promise`.
 ### Dependencies
 - `npm`
 - `yarn`
-- `Bower`
 
 Run `yarn install` to install dependencies
 
@@ -43,7 +42,7 @@ Run `yarn install` to install dependencies
 2. Create your feature branch `git checkout -b feature/my-new-feature`
 4. run `yarn tdd`
 5. Write ES6/ES2015+ code using the [Airbnb Style Guide](https://github.com/airbnb/javascript)
-6. run `yarn start` to build
+6. run `yarn build` to build
 7. Commit your changes: `git commit -am 'Add some feature'`
 8. Push to the branch: `git push origin feature/my-new-feature`
 9. Submit a pull request :D
