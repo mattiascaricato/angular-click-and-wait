@@ -17,7 +17,7 @@ const paths = {
 gulp.task('clean', () => del(paths.distDir));
 
 gulp.task('lint', () =>
-  gulp.src([paths.srcDir, paths.gulpFile])
+  gulp.src([paths.srcDir, paths.gulpFile, paths.testsDir])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
