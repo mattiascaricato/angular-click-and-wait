@@ -11,6 +11,7 @@ const paths = {
   gulpFile: 'gulpfile.babel.js',
   distDir: 'dist',
   testsDir: 'test/**/*.spec.js',
+  karmaConfigFile: `${__dirname}/karma.conf.js`,
 };
 
 gulp.task('clean', () => del(paths.distDir));
@@ -34,7 +35,14 @@ gulp.task('watch', () => {
 
 gulp.task('test', done =>
   new Server({
-    configFile: `${__dirname}/karma.conf.js`,
+    configFile: paths.karmaConfigFile,
+    singleRun: true,
+  }, done).start()
+);
+
+gulp.task('tdd', done =>
+  new Server({
+    configFile: paths.karmaConfigFile,
     singleRun: false,
   }, done).start()
 );

@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-mocks": "^1.5.8"
+    "angular-mocks": "^1.5.8",
+    "jquery": "^3.1.1"
   }
 }
