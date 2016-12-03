@@ -1,5 +1,5 @@
 # angular-click-and-wait
-Simple angular directive to prevent user from clicking mutiple times on a element when performing an asynchronous action.
+Simple angular directive to prevent user from clicking multiple times on a element when performing an asynchronous action.
 
 ## Install
 Install with npm or bower
