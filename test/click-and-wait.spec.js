@@ -20,12 +20,12 @@ describe('clickAndWait', () => {
 
   it('does not disable the button until it\'s clicked', () => {
     expect(element.prop('disabled')).to.be.false;
-    element.click();
+    element.triggerHandler('click');
     expect(element.prop('disabled')).to.be.true;
   });
 
   it('disables the button until the async action is finished', () => {
-    element.click();
+    element.triggerHandler('click');
     $timeout.flush(asyncActionDelay - 1);
     expect(element.prop('disabled')).to.be.true;
     $timeout.flush(1);
