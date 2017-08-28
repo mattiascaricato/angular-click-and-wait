@@ -1,6 +1,7 @@
 /* global angular:false, inject:false, expect:false */
 /* eslint-env mocha */
 /* eslint-disable no-unused-expressions */
+import clickAndWait from './click-and-wait';
 
 describe('clickAndWait', () => {
   let $timeout;
@@ -8,7 +9,7 @@ describe('clickAndWait', () => {
   let element;
   const asyncActionDelay = 1000;
 
-  beforeEach(module('clickAndWait'));
+  beforeEach(angular.mock.module(clickAndWait));
 
   beforeEach(inject((_$rootScope_, _$timeout_, _$compile_) => {
     scope = _$rootScope_.$new();

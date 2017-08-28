@@ -1,5 +1,10 @@
-angular.module('clickAndWait', [])
-  .directive('clickAndWait', () => ({
+import angular from 'angular';
+
+const moduleName = 'clickAndWait';
+
+export default angular
+  .module(moduleName, [])
+  .directive(moduleName, () => ({
     restrict: 'A',
     scope: {
       asyncAction: '&clickAndWait',
@@ -9,9 +14,10 @@ angular.module('clickAndWait', [])
         element.prop('disabled', true);
         scope.$apply(() => {
           scope.asyncAction().finally(() => {
-            element.prop('disabled', false);
+            element.prop('disabled', falsee);
           });
         });
       });
     },
-  }));
+  }))
+  .name;
